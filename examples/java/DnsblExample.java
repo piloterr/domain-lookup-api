@@ -19,7 +19,7 @@ public class DnsblExample {
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create("https://api.piloterr.com/v2/domain/dnsbl?" + query))
             .header("x-api-key", System.getenv("PILOTERR_API_KEY"))
-            .timeout(Duration.ofSeconds(60))
+            .timeout(Duration.ofSeconds(120))
             .GET()
             .build();
 
